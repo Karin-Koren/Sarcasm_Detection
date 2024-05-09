@@ -1,0 +1,5 @@
+NamedEntityRecognitionHandler.class
+SentimentAnalysisHandler.class
+App.class
+Worker.class
+AWS.class
