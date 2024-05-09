@@ -23,16 +23,16 @@ Manager:
 2. creates the queues.
 3. have 2 threads->1 listen to locals, 2 listen to workers.
 
-1 listen to locals:
-waits for a msg from a local up 
-and distributes the file to mini files that each has n/2 reviews.
-upload files to S3 creates workers accordingly and send them msgs.
-it creates an average number of workers that depends on the total 
-files we recieved and the avg N.
-
-2 listen to workers:
-waits for a msg from workers and creates the summery file accordingly and send
-it to the wanted local-up.
+  1. listen to locals:
+  waits for a msg from a local up 
+  and distributes the file to mini files that each has n/2 reviews.
+  upload files to S3 creates workers accordingly and send them msgs.
+  it creates an average number of workers that depends on the total 
+  files we recieved and the avg N.
+  
+  2. listen to workers:
+  waits for a msg from workers and creates the summery file accordingly and send
+  it to the wanted local-up.
 
 Worker:
 1. waits for a msg from the Manager.
